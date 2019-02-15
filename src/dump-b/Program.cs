@@ -21,8 +21,8 @@ namespace dump_b
             }
 
             using (var html = new HtmlGenerator(path))
+            using (var parser = new DumpParser(path))
             {
-                var parser = new DumpParser(path);
                 html.RenderThreads(parser.GetThreads());
                 html.RenderHeap(parser.GetHeap());
             }

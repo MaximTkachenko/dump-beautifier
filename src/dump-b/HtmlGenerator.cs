@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 using HtmlAgilityPack;
 
 namespace dump_b
@@ -20,9 +21,20 @@ namespace dump_b
             _doc.LoadHtml(File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "template.html")));
         }
 
-        public void RenderThreads(ParsedThread[] threads)
+        public void RenderThreads(Threads threads)
         {
+            var node = _doc.GetElementbyId("threads");
+            var html = new StringBuilder();
+            foreach (var item in threads.Items)
+            {
+                html.Append($"<div>{item.Key.ToString().ToUpper()}</div>");
+                foreach (var thread in item.Value)
+                {
+                    html.Append($"<div>thred#{thread.Id}</div>");
+                }
+            }
 
+            node.InnerHtml = html.ToString();
         }
 
         public void RenderHeap(Heap heap)
