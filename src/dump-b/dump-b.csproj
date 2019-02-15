@@ -7,7 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.8.14" />
     <PackageReference Include="Microsoft.Diagnostics.Runtime" Version="1.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="template.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

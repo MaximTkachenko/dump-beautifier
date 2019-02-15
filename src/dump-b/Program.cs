@@ -20,10 +20,12 @@ namespace dump_b
                 return;
             }
 
-            //start processing
-            //todo 1. parse threads
-            //todo 2. generate html file
-            //todo 3. parse heap
+            using (var html = new HtmlGenerator(path))
+            {
+                var parser = new DumpParser(path);
+                html.RenderThreads(parser.GetThreads());
+                html.RenderHeap(parser.GetHeap());
+            }
         }
     }
 }
