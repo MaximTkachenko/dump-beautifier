@@ -3,6 +3,7 @@ using System.IO;
 
 namespace dump_b
 {
+    //https://blog.maartenballiauw.be/post/2017/01/03/exploring-.net-managed-heap-with-clrmd.html
     class Program
     {
         static void Main(string[] args)
