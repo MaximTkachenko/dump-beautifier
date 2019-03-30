@@ -14,6 +14,7 @@ namespace dump_b
         {
             _dump = DataTarget.LoadCrashDump(dumpPath);
             ClrInfo runtimeInfo = _dump.ClrVersions[0];
+            Console.WriteLine(runtimeInfo.LocalMatchingDac);
             _runtime = runtimeInfo.CreateRuntime();
         }
 

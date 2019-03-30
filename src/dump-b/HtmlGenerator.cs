@@ -30,7 +30,7 @@ namespace dump_b
                 html.Append($"<div>{item.Key.ToString().ToUpper()}</div>");
                 foreach (var thread in item.Value)
                 {
-                    html.Append($"<div>thred#{thread.Id}</div>");
+                    html.Append($"<div>thread#{thread.Id}</div>");
                 }
             }
 
