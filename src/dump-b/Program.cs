@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using dump_b.Extensions;
+using Microsoft.Diagnostics.Runtime;
 
 namespace dump_b
 {
@@ -10,26 +12,68 @@ namespace dump_b
     {
         static void Main(string[] args)
         {
-            args = new[] { @"C:\code\dumps\Wavecell.MessageSphere.exe_190203_090555.dmp" };
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            args = new[] { @"C:\code\dumps\dotnet.dmp" };
             if (args == null || args.Length == 0)
             {
-                Console.WriteLine("provide path to dump file");
+                WriteError("provide path to dump file");
                 return;
             }
 
             var path = args[0];
             if (!File.Exists(path))
             {
-                Console.WriteLine("file not found");
+                WriteError("file not found");
                 return;
             }
 
-            using (var html = new HtmlGenerator(path))
-            using (var parser = new DumpParser(path))
+            Console.ResetColor();
+
+            DataTarget dump = DataTarget.LoadCrashDump(path);
+            var html = new HtmlTemplate(path);
+            try
             {
-                html.RenderThreads(parser.GetThreads());
-                html.RenderHeap(parser.GetHeap());
+                ClrInfo runtimeInfo = dump.ClrVersions[0];
+                ClrRuntime runtime = runtimeInfo.CreateRuntime();
+
+                html.RenderRuntime(runtime.CreateMarkup());
+                html.RenderThreads(runtime.Threads.CreateMarkup());
+                html.RenderThreadpool(runtime.ThreadPool.CreateMarkup());
+                html.RenderHeap(runtime.Heap.CreateMarkup());
+
+                Console.ForegroundColor = ConsoleColor.Green;
+                WriteOk(html.OutputFilePath);
             }
+            catch (Exception ex)
+            {
+                WriteError(ex.Message);
+            }
+            finally
+            {
+                dump.Dispose();
+                html.Dispose();
+            }
+        }
+
+        static void WriteError(string text)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(text);
+            Console.ResetColor();
+        }
+
+        static void WriteOk(string text)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(text);
+            Console.ResetColor();
+        }
+
+        static void Write(string text)
+        {
+            Console.ResetColor();
+            Console.WriteLine(text);
         }
     }
 }
