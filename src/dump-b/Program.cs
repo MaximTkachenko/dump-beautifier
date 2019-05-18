@@ -34,10 +34,10 @@ namespace dump_b
             var html = new HtmlTemplate(path);
             try
             {
-                ClrInfo runtimeInfo = dump.ClrVersions[0];
-                ClrRuntime runtime = runtimeInfo.CreateRuntime();
+                ClrInfo clrInfo = dump.ClrVersions[0];
+                ClrRuntime runtime = clrInfo.CreateRuntime();
 
-                html.RenderRuntime(runtime.CreateMarkup());
+                html.RenderClrInfo(clrInfo.CreateMarkup());
                 html.RenderThreads(runtime.Threads.CreateMarkup());
                 html.RenderThreadpool(runtime.ThreadPool.CreateMarkup());
                 html.RenderHeap(runtime.Heap.CreateMarkup());

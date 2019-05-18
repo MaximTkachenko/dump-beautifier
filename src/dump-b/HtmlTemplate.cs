@@ -21,15 +21,15 @@ namespace dump_b
 
         public string OutputFilePath { get; }
 
-        public void RenderRuntime(string runtime) => Render("runtime", runtime);
+        public void RenderClrInfo(string clrInfo) => Render("clr-info", clrInfo);
 
         public void RenderThreads(string threads) => Render("threads-details", threads);
 
-        public void RenderThreadpool(string threadpool) => Render("threadpool", threadpool);
+        public void RenderThreadpool(string threadpool) => Render("thread-pool", threadpool);
 
         public void RenderHeap(string heap) => Render("heap", heap);
 
-        private void Render(string id, string html) => _doc.GetElementbyId(id).InnerHtml = html;
+        private void Render(string id, string html) => _doc.GetElementbyId(id).InnerHtml += html;
 
         public void Dispose()
         {

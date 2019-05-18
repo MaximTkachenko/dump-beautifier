@@ -9,7 +9,9 @@ namespace dump_b.Extensions
     {
         public static string CreateMarkup(this ClrThreadPool threadpool)
         {
-            return null;
+            var html = new StringBuilder();
+
+            return html.ToString();
         }
     }
 }
