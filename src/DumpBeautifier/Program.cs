@@ -1,13 +1,13 @@
 ﻿using System;
 using System.IO;
-using dump_b.Extensions;
+using DumpBeautifier.Extensions;
 using Microsoft.Diagnostics.Runtime;
 
-namespace dump_b
+namespace DumpBeautifier
 {
     //https://blog.maartenballiauw.be/post/2017/01/03/exploring-.net-managed-heap-with-clrmd.html
-    // https://github.com/Microsoft/clrmd/blob/master/Documentation/GettingStarted.md
-    // https://labs.criteo.com/2017/02/going-beyond-sos-clrmd-part-1/
+    //https://github.com/Microsoft/clrmd/blob/master/Documentation/GettingStarted.md
+    //https://labs.criteo.com/2017/02/going-beyond-sos-clrmd-part-1/
     class Program
     {
         static void Main(string[] args)

@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 using Microsoft.Diagnostics.Runtime;
 
-namespace dump_b.Extensions
+namespace DumpBeautifier.Extensions
 {
     static class ClrInfoExt
     {
