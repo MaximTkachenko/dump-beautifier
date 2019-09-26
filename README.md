@@ -1,6 +1,6 @@
 [![Build Status](https://dev.azure.com/mtkorg/oss-projects/_apis/build/status/MaximTkachenko.dump-beautifier?branchName=master)](https://dev.azure.com/mtkorg/oss-projects/_build/latest?definitionId=5&branchName=master)
 
-# dump-beautifier
+# [WIP] dump-beautifier
 Parses .NET application dump and generates html document to show process internals using [D3.js](https://d3js.org/)
 
 1. Create dump using [procdump](https://docs.microsoft.com/en-us/sysinternals/downloads/procdump) tool `procdump.exe -ma process_name c:\dumps` or `procdump.exe -ma 55 c:\dumps`
