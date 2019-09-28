@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dump-b", "dump-b\dump-b.csproj", "{13193A2B-0DB5-4DED-BDAE-4C22D9B112AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DumpBeautifier", "DumpBeautifier\DumpBeautifier.csproj", "{13193A2B-0DB5-4DED-BDAE-4C22D9B112AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

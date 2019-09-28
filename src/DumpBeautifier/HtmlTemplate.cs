@@ -2,7 +2,7 @@
 using System.IO;
 using HtmlAgilityPack;
 
-namespace dump_b
+namespace DumpBeautifier
 {
     class HtmlTemplate : IDisposable
     {
@@ -16,7 +16,7 @@ namespace dump_b
                 File.Delete(OutputFilePath);
             }
             _doc = new HtmlDocument();
-            _doc.LoadHtml(File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "template.html")));
+            _doc.LoadHtml(File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "templates", "template.html")));
         }
 
         public string OutputFilePath { get; }

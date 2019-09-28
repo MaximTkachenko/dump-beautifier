@@ -14,4 +14,4 @@ steps:
   displayName: 'build'
   inputs:
     command: 'build'
-    projects: 'src/dump-b/dump-b.csproj'
+    projects: 'src/DumpBeautifier/DumpBeautifier.csproj'

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreConsole", "NetCoreConsole\NetCoreConsole.csproj", "{BDC4F87B-0867-48D3-A590-0E844E24BC1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetFrameworkConsole", "NetFrameworkConsole\NetFrameworkConsole.csproj", "{6F577AFB-AE76-46F0-887B-C406F1AFF1CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDC4F87B-0867-48D3-A590-0E844E24BC1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDC4F87B-0867-48D3-A590-0E844E24BC1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDC4F87B-0867-48D3-A590-0E844E24BC1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDC4F87B-0867-48D3-A590-0E844E24BC1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F577AFB-AE76-46F0-887B-C406F1AFF1CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F577AFB-AE76-46F0-887B-C406F1AFF1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F577AFB-AE76-46F0-887B-C406F1AFF1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F577AFB-AE76-46F0-887B-C406F1AFF1CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20893D1B-9F4C-4D2E-8452-D097320004D9}
+	EndGlobalSection
+EndGlobal
