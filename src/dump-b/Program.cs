@@ -10,11 +10,9 @@ namespace dump_b
     // https://labs.criteo.com/2017/02/going-beyond-sos-clrmd-part-1/
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-
-            args = new[] { @"C:\code\dumps\dotnet.dmp" };
+            args = new[] { @"C:\dumps\dotnet.dmp" };
             if (args == null || args.Length == 0)
             {
                 WriteError("provide path to dump file");
@@ -28,9 +26,7 @@ namespace dump_b
                 return;
             }
 
-            Console.ResetColor();
-
-            DataTarget dump = DataTarget.LoadCrashDump(path);
+            var dump = DataTarget.LoadCrashDump(path);
             var html = new HtmlTemplate(path);
             try
             {
