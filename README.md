@@ -1,5 +1,3 @@
-[![Build Status](https://dev.azure.com/mtkorg/oss-projects/_apis/build/status/MaximTkachenko.dump-beautifier?branchName=master)](https://dev.azure.com/mtkorg/oss-projects/_build/latest?definitionId=5&branchName=master)
-
 # [WIP] dump-beautifier
 Parses .NET application dump and generates html document to show process internals using [D3.js](https://d3js.org/)
 
