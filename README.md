@@ -5,3 +5,6 @@ Parses .NET application dump and generates html document to show process interna
 2. If dump is created on a remote machine you need to copy `mscordacwks.dll` (or `mscordaccore.dll` in case of dotnet core) locally to folder with dump
 2. Run `dotnet DumpBeautifier.dll %path to dump file%`
 3. Open generated `%dump file name%-beautified.html` in the dump folder
+
+As an idea:
+- crossplatform web-ui for https://github.com/fremag/MemoScope.Net
